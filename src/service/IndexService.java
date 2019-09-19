@@ -41,13 +41,13 @@ public class IndexService {
 		
 		InputStreamReader in = new InputStreamReader(con.getInputStream());
 		BufferedReader br = new BufferedReader(in);
-        String output;
-        StringBuffer buffer = new StringBuffer();
-        while ((output = br.readLine()) != null) {
-        	buffer.append(output);
-        }
-        in.close();
-        con.disconnect();
+		String output;
+		StringBuffer buffer = new StringBuffer();
+		while ((output = br.readLine()) != null) {
+			buffer.append(output);
+		}
+		in.close();
+		con.disconnect();
 		
 		return buffer.toString();
 	}
